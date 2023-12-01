@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/azul">
+    
+    <androidx.cardview.widget.CardView
+        android:id="@+id/containerImg"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        app:cardBackgroundColor="@color/azul"
+        android:layout_margin="20dp"
+        app:cardCornerRadius="15dp"
+        app:cardElevation="8dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        >
+        
+        <ImageView
+            android:id="@+id/imgReciclagem"
+            android:layout_width="100dp"
+            android:layout_height="80dp"
+            android:layout_gravity="center"
+            android:scaleType="centerCrop"
+            />
+
+    </androidx.cardview.widget.CardView>
+    
+    <TextView
+        android:id="@+id/txtName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Carrinho"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_margin="20dp"
+        app:layout_constraintStart_toEndOf="@+id/containerImg"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/txtDescricao"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:text="Este pequeno veículo combina criatividade e consciência ambiental, oferecendo uma solução prática para transporte leve."
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:layout_marginStart="140dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginVertical="10dp"
+        app:layout_constraintStart_toEndOf="@+id/containerImg"
+        app:layout_constraintTop_toBottomOf="@+id/txtName"
+        />
+
+    <Button
+        android:id="@+id/btAprender"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:backgroundTint="@color/verde"
+        android:text="Aprender"
+        android:textColor="@color/white"
+        android:textSize="12dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/containerImg"
+        app:layout_constraintTop_toBottomOf="@+id/txtDescricao" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:background="@color/white"
+        app:layout_constraintTop_toBottomOf="@id/btAprender"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="20dp"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
